@@ -7,15 +7,10 @@ let arr = [1, 4, 7, 2, 5, 9, 3];
 const btnadd = document.getElementById('add')
 btnadd.addEventListener('click', () => {
     // Adds numbers to array
-    let i = arr.length;
-    arr[i] = numbers.value
-    if (i >= 1) {
-        values.innerHTML += ', '
-    }
-    values.innerHTML += (arr[i])
+    arr.push(parseInt(numbers.value))
+    values.innerHTML = (arr)
     numbers.focus()
     numbers.value = ''
-    i++;
 })
 
 // adds numbers to array on enter 
